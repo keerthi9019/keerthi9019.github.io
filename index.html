@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keerthana A S— FullStack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Keerthana A S — AI/ML Enthusiast, Full-Stack Developer, and BE Gratuated, specializing in Computer Science and Engineering." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════ PRELOADER / INTRO ═══════ -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+      <img src="./images/kc-logo.png" alt="KC Logo" class="preloader-logo-img">
+      </div>
+      <p class="preloader-tagline">Building the future with AI</p>
+      <div class="preloader-bar"><div class="preloader-fill" id="preloaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- ═══════ CUSTOM CURSOR ═══════ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-trail" id="trail0"></div>
+  <div class="cursor-trail" id="trail1"></div>
+  <div class="cursor-trail" id="trail2"></div>
+  <div class="cursor-trail" id="trail3"></div>
+  <div class="cursor-trail" id="trail4"></div>
+
+  <!-- ═══════ 3D CANVAS (Three.js floating objects) ═══════ -->
+  <canvas id="threeBg"></canvas>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+      <img src="./images/kc-logo.png" alt="KC Logo" class="nav-logo-img">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="ri-moon-fill theme-icon-dark"></i>
+          <i class="ri-sun-fill theme-icon-light"></i>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section id="hero">
+    <div  class="hero-content">
+      <p  class="hero-greeting">Hello, I'm</p>
+      <h1 class="hero-name fx-glitch" data-text="Keerthana A S">Keerthana A S</h1>
+      <div class="hero-subtitle-wrapper">
+        <span class="hero-subtitle-label">I am a&nbsp;</span>
+        <span class="hero-subtitle" id="rotatingText"></span>
+        <span class="hero-cursor">|</span>
+      </div>
+      <p  class="hero-description" class="fx-wave ">
+        Turning ideas into practical software solutions through Full Stack Development and modern web technologies.
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary magnetic" id="ctaContact">
+          <i class="ri-mail-send-line"></i> Contact Me
+        </a>
+        <a href="#projects" class="btn btn-outline magnetic" id="ctaProjects">
+          <i class="ri-folder-3-line"></i> View Projects
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/keerthanaas9019/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon magnetic">
+          <i class="ri-linkedin-fill"></i>
+        </a>
+        <a href="https://github.com/keerthi9019" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon magnetic">
+          <i class="ri-github-fill"></i>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator" id="scrollIndicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ABOUT ═══════════════════ -->
+  <section id="about" class="section"> 
+    <div class="container">
+      <h2 class="section-title fx-fill" data-animate="heading">
+        <span class="gradient-text">About</span> Me
+      </h2>
+      <div class="about-grid">
+        <div class="about-image-wrapper" data-animate="left">
+          <div class="about-image-container">
+            <div class="about-avatar">
+              <img src="./images/keerthi.png" alt="Keerthana A S Profile" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            </div>
+            <div class="about-image-border"></div> 
+          </div>
+          <div class="about-image-dots"></div>
+        </div>
+        <div class="about-text" data-animate="right">
+          <h3 class="about-headline">
+            Computer Science Graduate &amp; <span class="gradient-text">Full Stack</span> Developer
+          </h3>
+          <p>
+            <p> I am a <strong>Computer Science gratuate</strong> passionate about <strong>Software Development</strong>,<strong>Full Stack Development</strong>,
+              <strong>Web Development</strong>, and <strong>building practical solutions to real-world problems</strong>.
+              I enjoy creating modern applications and continuously enhancing my technical skills.
+         </p>
+          </p>
+          <p>Passionate about AI, Machine Learning, and Software Development, 
+              I enjoy creating intelligent applications and turning ideas into practical solutions.
+         </p>
+          </p>
+          <div class="about-stats">
+            <div class="stat-item glass-card">
+              <span class="stat-number" data-count="8.3"></span><span class="stat-plus">+</span><span class="stat-plus">CGPA</span></span>
+              <span class="stat-label">Graduated</span>
+            </div>
+            <div class="stat-item glass-card">
+              <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-item glass-card">
+              <span class="stat-number" data-count="3">0</span><span class="stat-plus">+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-primary">
+            <i class="ri-chat-3-line"></i> Let's Talk
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SKILLS ═══════════════════ -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title" data-animate="heading">
+        My <span class="gradient-text">Skills</span>
+      </h2>
+      <p class="section-subtitle" data-animate="fade">The technologies and tools I work with</p>
+      <div class="skills-grid">
+
+        <div class="skill-card glass-card" data-animate="skill" data-tilt>
+          <div class="skill-icon" style="--accent: #f7df1e;">
+            <i class="ri-javascript-fill"></i>
+          </div>
+          <h4>Languages</h4>
+          <div class="skill-tags">
+          <span>Python</span>
+          <span>Java</span>
+          <span>JavaScript</span>
+          <span>SQL</span>
+      </div>
+        </div>
+
+        <div class="skill-card glass-card" data-animate="skill" data-tilt>
+          <div class="skill-icon" style="--accent: #e44d26;">
+            <i class="ri-html5-fill"></i>
+          </div>
+          <h4>Frontend </h4>
+          <div class="skill-tags">
+          <span>React.js</span>
+          <span>HTML</span>
+          <span>CSS</span>
+        </div>
+        </div>
+
+        <div class="skill-card glass-card" data-animate="skill" data-tilt>
+          <div class="skill-icon" style="--accent: #88ce02;">
+            <i class="ri-movie-2-fill"></i>
+          </div>
+          <h4>Backend</h4>
+          <div class="skill-tags">
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>Flask</span>
+          <span>FastAPI</span>
+        </div>
+        </div>
+
+        <div class="skill-card glass-card" data-animate="skill" data-tilt>
+          <div class="skill-icon" style="--accent: #47a248;">
+            <i class="ri-database-2-fill"></i>
+          </div>
+          <h4>Database</h4>
+          <div class="skill-tags">
+        <span>MongoDB</span>
+        <span>MySQL</span>
+       </div>
+        </div>
+
+        <div class="skill-card glass-card" data-animate="skill" data-tilt>
+          <div class="skill-icon" style="--accent: #ff6f00;">
+            <i class="ri-robot-2-fill"></i>
+          </div>
+          <h4>Tools</h4>
+          <div class="skill-tags">
+          <span>Git</span>
+          <span>GitHub</span>
+          <span>VS Code</span>
+          <span>Jupyter Notebook</span>
+        </div>
+        </div>
+
+        <div class="skill-card glass-card" data-animate="skill" data-tilt>
+          <div class="skill-icon" style="--accent: #4dabcf;">
+            <i class="ri-bar-chart-box-fill"></i>
+          </div>
+          <h4>Domains</h4>
+          <div class="skill-tags">
+          <span>Full Stack Development</span>
+          <span>Web Development</span>
+        </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ PROJECTS ═══════════════════ -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title" data-animate="heading">
+        My <span class="gradient-text">Projects</span>
+      </h2>
+      <p class="section-subtitle" data-animate="fade">A showcase of things I've built</p>
+      <div class="projects-grid">
+
+        <!-- PROJECT CARD 1 -->
+        <article class="project-card glass-card" data-animate="project" data-tilt>
+          <div class="project-image">
+            <div class="project-placeholder"><i class="ri-robot-2-line"></i></div>
+            <div class="project-overlay">
+              <a href="https://github.com/keerthi9019/old-book-buy-sell-website" target="_blank" class="project-link" aria-label="Source Code"><i class="ri-github-fill"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4 >Old Book Buy & Sell Website</h4>
+            <p>Full-stack MERN marketplace for buying and selling old books with secure authentication and REST APIs.</p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 2 -->
+        <article class="project-card glass-card" data-animate="project" data-tilt>
+          <div class="project-image">
+            <div class="project-placeholder"><i class="ri-line-chart-line"></i></div>
+            <div class="project-overlay">
+              <a href="https://github.com/keerthi9019/Main-Project-Code" target="_blank" class="project-link" aria-label="Source Code"><i class="ri-github-fill"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Ransomware Threat Detection</h4>
+            <p>ML-based cybersecurity system detecting ransomware in real time using Random Forest, XGBoost and Machine Learning.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Scikit-Learn</span><span>ML</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT CARD 3 -->
+        <article class="project-card glass-card" data-animate="project" data-tilt>
+          <div class="project-image">
+            <div class="project-placeholder"><i class="ri-global-line"></i></div>
+            <div class="project-overlay">
+              <a href="https://github.com/keerthi9019/weapon-detection-yolov8" target="_blank" class="project-link" aria-label="Live Demo"><i class="ri-external-link-line"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h4>Intelligent Weapon Detection</h4>
+            <p>Real-time weapon detection for smart surveillance using YOLOv8, OpenCV and Deep Learning.</p>
+            <div class="project-tags">
+              <span>Python</span><span>OpenCV</span><span>Deep Learning</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CONTACT ═══════════════════ -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title" data-animate="heading">
+        Get In <span class="gradient-text">Touch</span>
+      </h2>
+      <p class="section-subtitle" data-animate="fade">Have a project in mind? Let's work together!</p>
+      <div class="contact-grid">
+        <div class="contact-info" data-animate="left">
+          <div class="contact-card glass-card" data-tilt>
+            <div class="contact-icon"><i class="ri-mail-line"></i></div>
+            <h4>Email</h4>
+            <p>Drop me a message using the form — I'll get back to you ASAP.</p>
+          </div>
+          <div class="contact-card glass-card" data-tilt>
+            <div class="contact-icon"><i class="ri-linkedin-box-fill"></i></div>
+            <h4>LinkedIn</h4>
+            <a href="https://www.linkedin.com/in/keerthanaas9019/" target="_blank" rel="noopener noreferrer">Connect with me</a>
+          </div>
+          <div class="contact-card glass-card" data-tilt>
+            <div class="contact-icon"><i class="ri-github-fill"></i></div>
+            <h4>GitHub</h4>
+            <a href="https://github.com/keerthi9019" target="_blank" rel="noopener noreferrer">View my repos</a>
+          </div>
+        </div>
+        <form id="contactForm" class="contact-form glass-card" data-animate="right" action="https://formsubmit.co/keerthanakeerthi6969@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_subject" value="New Portfolio Contact Message!" />
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <i class="ri-send-plane-fill"></i> Send Message
+          </button>
+          <p class="form-note">Your message goes straight to my inbox.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-logo">
+  <img src="./images/kc-logo.png" alt="KC Logo" class="nav-logo-img">
+</a>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/keerthanaas9019/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+        <a href="https://github.com/keerthi9019" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="ri-github-fill"></i></a>
+      </div>
+      <p class="footer-copy">&copy; 2026 Keerthana A S. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <!-- Lenis (Smooth Scroll) -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
